@@ -1,7 +1,7 @@
 <template>
-    <div class="agent">
+    <div class="working">
         <Layout>
-            代理人画面
+            工事中。。。
         </Layout>
     </div>
 </template>

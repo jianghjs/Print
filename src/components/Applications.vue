@@ -1,11 +1,17 @@
 <template>
     <div class="applications">
-        申請書画面
+        <Layout>
+            申請書画面
+        </Layout>
     </div>
 </template>
 
 <script>
+import Layout from './Layout'
+
 export default {
-    
+    components : {
+        Layout
+    }
 }
 </script>

@@ -1,25 +1,31 @@
 <template>
     <div class="layout">
         <el-container>
-            <el-header>
-                <el-menu :default-active="activeIndex" mode="horizontal" class="el-menu-demo">
-                    <el-menu-item index="1">トップ</el-menu-item>
-                    <el-menu-item index="2">申請書</el-menu-item>
-                    <el-menu-item index="3">代理人</el-menu-item>
-                </el-menu>
+            <el-header class="header">
+                <NavMenu/>
             </el-header>
-            <el-main>main</el-main>
-            <el-footer>footer</el-footer>
+            <el-container>
+                <el-aside class="aside">
+                    <slot name="aside">aside</slot>
+                </el-aside>
+                <el-main class="main">
+                    <slot>main</slot>
+                </el-main>
+            </el-container>
         </el-container>
     </div>
 </template>
 
 <script>
+import NavMenu from './Nav'
+
 export default {
-    data () {
-        return {
-            activeIndex: '1'
-        }
+    components : {
+        NavMenu
     }
 }
 </script>
+
+<style scoped>
+
+</style>
